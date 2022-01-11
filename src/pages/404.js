@@ -1,7 +1,7 @@
 import * as React from "react"
 import Helmet from "react-helmet"
 import Button from "../components/Button"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Container from "../components/Container"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
