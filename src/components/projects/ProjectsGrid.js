@@ -22,7 +22,7 @@ const ProjectsGrid = () => {
                     title="Portfolio"
                     description="A basic single page portfolio site to display recent projects. This is currently being used as a placeholder while I redesign my portfolio."
                     links={[
-                        {text: "View on GitHub", icon: ["fab", "github"], url: "/projects/portfolio"}
+                        { text: "View on GitHub", icon: ["fab", "github"], url: "https://github.com/aterstriep/portfolio"}
                     ]}
                     imageFileName="at-screenshot.png"
                     categoryList={["React", "Gatsby", "CSS/SCSS", "Javascript", "Netlify"]}
