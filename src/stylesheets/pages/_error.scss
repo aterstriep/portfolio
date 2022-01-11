@@ -1,0 +1,14 @@
+body.error .container {
+    text-align: center;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    svg.fa-bug {
+        width: 36px;
+        height: 36px;
+        color: $secondary;
+        margin-top: 20px;
+    }
+}

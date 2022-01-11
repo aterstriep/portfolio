@@ -1,0 +1,71 @@
+@mixin hoverSlide($color) {
+    background-image: linear-gradient(to right, $color 50%, transparent 50%);
+    background-size: 200%;
+    background-position: 100%;
+    &:hover {
+        background-position: 0%;
+    }
+}
+
+@mixin button {
+    padding: 10px 18px;
+    background-color: $action;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.25;
+    transition: .2s ease all;
+    @include hoverSlide(darken($action, 10%));
+}
+
+button,
+input[type="submit"],
+a.button {
+    @include button;
+
+    &.button_has-icon {
+        padding: 0;
+        display: inline-grid;
+        grid-template-columns: 35px 1fr;
+        align-items: center;
+        justify-items: center;
+        border: none;
+        background-image: linear-gradient(to right, darken($action, 10%) 50%, transparent 50%);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            padding: 10px;
+            border-top-left-radius: inherit;
+            border-bottom-left-radius: inherit;
+            background-color: darken($action, 10%);
+        }
+
+        > span {
+            padding: 10px 14px 10px 12px;
+        }
+    }
+
+    &.button_small {
+        padding: 2px 10px;
+        border-radius: 4px;
+
+        &.button_has-icon {
+            padding: 0;
+            grid-template-columns: 28px 1fr;
+            svg {
+                padding: 6px;
+                height: 28px;
+                width: 28px;
+            }
+            > span {
+                padding: 6px 12px;
+            }
+        }
+    }
+}

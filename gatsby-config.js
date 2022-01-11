@@ -4,7 +4,9 @@ module.exports = {
     title: "Portfolio",
   },
   plugins: [
+    "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -22,6 +24,12 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/favicon.png',
+      },
     },
   ],
 };

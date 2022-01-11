@@ -1,0 +1,55 @@
+// typography
+
+$body-font: 'Poppins', sans-serif;
+$heading-font: 'Domine', serif;
+
+@mixin bodyfont {
+  color: $black;
+  font-family: $body-font;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+@mixin headingfont($case: normal) {
+  color: $primary;
+  font-family: $heading-font;
+  text-transform: $case;
+  font-weight: 800;
+}
+
+@mixin subtitle {
+  font-family: $body-font;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+body {
+    @include bodyfont;
+}
+
+a {
+	color: $action;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include headingfont;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.color-white {
+  color: white;
+}

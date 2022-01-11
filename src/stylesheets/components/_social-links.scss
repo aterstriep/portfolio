@@ -1,0 +1,24 @@
+@mixin socialLink($color) {
+    background-color: $color;
+    background-image: linear-gradient(to right, darken($color, 10%) 50%, transparent 50%);
+    transition: .25s ease all;
+    svg {
+        background-color: darken($color, 10%);
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    a.github {
+        @include socialLink(#6e5494);
+    }
+    a.linkedin {
+        @include socialLink(#2867B2);
+    }
+
+    @include breakpoint(sm) {
+        flex-wrap: wrap;
+    }
+}

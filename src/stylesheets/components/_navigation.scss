@@ -1,0 +1,33 @@
+nav.nav-horizontal {
+    padding: $gut-xs $gut-md;
+
+    ul {
+        display: flex;
+
+        li {
+            margin-left: 15px;
+        }
+    }
+
+    &.nav-right ul {
+        justify-content: flex-end;
+    }
+}
+
+nav ul {
+    @include clearList;
+}
+
+/* main navigation */
+nav.main-nav {
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+}

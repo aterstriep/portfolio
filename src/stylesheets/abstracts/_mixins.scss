@@ -1,0 +1,75 @@
+// mixins
+
+@mixin bgImage($position: center) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $position;
+}
+
+@mixin clearList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.clearlist {
+  @include clearList;
+}
+
+// Border
+@mixin borderBottom($color: $action, $hoverColor: $secondary, $hover: false) {
+  position: relative;
+  z-index: 1;
+  &:after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background-color: $color;
+      height: 40%;
+      z-index: -1;
+      transition: .25s ease all;
+  }
+  @if $hover {
+    &:hover:after {
+      transition: .25s ease all;
+      height: calc(100% + 2px);
+    }
+  }
+}
+
+
+// responsive breakpoints
+@mixin breakpoint($breakpoint) {
+
+  @if $breakpoint == "xs" {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "sm" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "md" {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "lg" {
+    @media (min-width: 993px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "xl" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+}
