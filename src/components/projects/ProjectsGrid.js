@@ -15,7 +15,7 @@ const ProjectsGrid = () => {
                         { text: "View on GitHub", icon: ["fab", "github"], url: "https://github.com/aterstriep/notes-app" },
                         { text: "View Deployed", icon: "bolt", url: "https://at-notes-app.herokuapp.com/" }
                     ]}
-                    categoryList={["React", "CSS/SCSS", "Javascript", "Express", "Node.js", "Heroku"]}
+                    categoryList={["React", "CSS/SASS", "Javascript", "Express", "Node.js", "Heroku"]}
                 />
 
                 <Project
@@ -27,7 +27,7 @@ const ProjectsGrid = () => {
                         { text: "View Deployed", icon: "bolt", url: "https://mealplanapp.netlify.com"}
                     ]}
                     imageFileName="mealplan-screenshot.png"
-                    categoryList={["React", "Gatsby", "CSS/SCSS", "Javascript", "Netlify"]}
+                    categoryList={["React", "Gatsby", "CSS/SASS", "Javascript", "Netlify"]}
                 />
 
                 <Project
@@ -37,7 +37,7 @@ const ProjectsGrid = () => {
                     links={[
                         { text: "View on GitHub", icon: ["fab", "github"], url: "https://github.com/aterstriep/portfolio"}
                     ]}
-                    categoryList={["React", "Gatsby", "CSS/SCSS", "Javascript", "Netlify"]}
+                    categoryList={["React", "Gatsby", "CSS/SASS", "Javascript", "Netlify"]}
                 />
 
             </div>

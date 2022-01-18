@@ -21,7 +21,7 @@ const Category = ({name}) => {
         case "gatsby":
             borderColor = "#663399";
             break;
-        case "css/scss":
+        case "css/sass":
             borderColor = "#cf6499";
             break;
         case "wordpress":
