@@ -1,0 +1,52 @@
+div#about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 80px 0 60px;
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 40px 0 80px;
+    }
+
+    > div:nth-child(2) {
+        padding: 0 80px 0 40px;
+        max-width: 800px;
+        h2 {
+            margin: 0;
+            line-height: 1;
+            font-size: 28px;
+        }
+       p.about-icon {
+            display: flex;
+            gap: 6px;
+            margin: 15px 0 0;
+            svg {
+                color: white;
+                background-color: $primary;
+                width: 26px;
+                height: 26px;
+                padding: 6px;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    @include breakpoint(sm) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 40px 20px;
+
+        > div:nth-child(2) {
+            padding: 0;
+        }
+
+        .social-links {
+            padding: 0;
+            align-items: flex-start;
+        }
+    }
+}

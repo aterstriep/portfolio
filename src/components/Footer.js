@@ -6,7 +6,6 @@ const Footer = () => {
 
     return (
         <footer>
-            <SocialLinks />
             <p id="copyright">© {new Date().getFullYear()} Ashley Terstriep</p>
         </footer>
     )

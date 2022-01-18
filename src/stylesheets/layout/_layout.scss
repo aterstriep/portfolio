@@ -1,0 +1,11 @@
+main:before {
+    content: "";
+    position: fixed;
+    inset: 0 66.67% 0 0;
+    background-color: $neutral;
+    z-index: -1;
+
+    @include breakpoint(sm) {
+        display: none;
+    }
+}

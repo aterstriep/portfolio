@@ -3,7 +3,9 @@ import Category from "./Category"
 import Image from "../Image";
 import Button from "../Button";
 
-const Project = ({title, links, imageFileName, description, categoryList}) => {
+const Project = ({title, subtitle, links, imageFileName, description, categoryList}) => {
+
+    const id = title.toLowerCase().replace(/\s+/g, '-');
 
     const Categories = () => {
         return (
@@ -18,20 +20,9 @@ const Project = ({title, links, imageFileName, description, categoryList}) => {
     }
 
     return (
-        <div className="project-container">
-            <div className="project-image">
-                <Image
-                    src="browser.png"
-                    className="browser-mockup"
-                    alt="Browser mockup"
-                />
-                <Image
-                    src={imageFileName}
-                    className="project-screenshot"
-                    alt="Screenshot"
-                />
-            </div>
-            <div className="project-details">
+        <div className="project-container" id={id}>
+            <div>
+                <p className="subtitle">{subtitle}</p>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <Categories />
@@ -40,6 +31,11 @@ const Project = ({title, links, imageFileName, description, categoryList}) => {
                         return <Button href={link.url} icon={link.icon} target="_blank" key={index}>{link.text}</Button>
                     })}
                 </div>
+                <Image
+                    src={imageFileName}
+                    className="project-screenshot"
+                    alt="Screenshot"
+                />
             </div>
         </div>
     )

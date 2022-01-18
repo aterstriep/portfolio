@@ -1,123 +1,41 @@
 .home-header {
-    background-color: $primary;
     position: relative;
+    padding: 60px 40px 60px;
 
     .home-header-content {
-        display: grid;
-        grid-gap: 40px;
-        grid-template-columns: 1fr 2fr;
         max-width: 1200px;
-        padding: 60px 40px 0;
         margin: 0 auto;
 
-        .headshot {
-            position: relative;
-            margin-bottom: -65px;
-            .gatsby-image-wrapper {
-                position: absolute !important;
-                inset: 0;
-
-                img {
-                    object-position: center top !important;
-                    border-radius: 8px;
-                }
-            }
+        p.subtitle {
+            color: $action;
+            font-size: 18px;
+            margin: 0;
         }
-    
-        .header-intro {
-            margin-bottom: -65px;
 
-            h2 {
-                color: white;
-                margin-bottom: 10px;
+        h1 {
+            color: $dark;
+            margin: 0;
+            font-size: 72px;
+            line-height: 1.5;
+            
+            span:not(.text-emph) {
+                display: block;
             }
-            .text-emph {
-                color: white;
-                font-weight: 600;
-                line-height: 2;
-                margin: 0;
-                @include borderBottom($action);
+            span.text-emph {
+                color: $secondary;
             }
-            p {
-                color: white;
-                line-height: 2;
-                font-size: 16px;
-                margin-top: 0;
-
-                &.current-position {
-                    font-size: 14px;
-                    font-style: italic;
-                }
-
-                span.text-emph:after {
-                    bottom: 0;
-                    background-color: $dark;
-                }
-
-                svg {
-                    margin-right: 2px;
-                }
-            }
-            a {
-                color: white;
-                &:hover {
-                    color: white;
-                }
-            }
-            .social-links {
-                justify-content: flex-start;
-                margin: 40px 0 20px;
-            }
-        }
-    }
-
-    @include breakpoint(md) {
-        .text-emph:after {
-            display: none;
         }
     }
 
     @include breakpoint(sm) {
+        padding: 40px 20px;
         .home-header-content {
-            grid-template-columns: 1fr;
-            justify-items: center;
-            grid-gap: 20px;
-            padding: 40px 20px;
 
-            .headshot {
-                margin: 0;
-                height: 200px;
-                width: 200px;
+            h1 {
+                font-size: 36px;
 
-                .gatsby-image-wrapper img {
-                    border-radius: 100%;
-                }
-            }
-            
-            .header-intro {
-                margin: 0;
-                text-align: center;
-
-                h2 {
-                    @include subtitle;
-                    line-height: 1;
-
-                    span.text-emph {
-                        display: block;
-                        font-family: $heading-font;
-                        font-size: 28px;
-                        text-transform: none;
-                    }
-                }
-
-                p.current-position {
-                    font-size: 12px;
-                    line-height: 1.5;
-                }
-                
-                .social-links {
-                    margin: 30px -10px 0;
-                    justify-content: center;
+                span:not(.text-emph) {
+                    display: inline;
                 }
             }
         }

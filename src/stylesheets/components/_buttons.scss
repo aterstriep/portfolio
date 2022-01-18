@@ -20,6 +20,7 @@
     display: inline-block;
     line-height: 1.25;
     transition: .2s ease all;
+    cursor: pointer;
     @include hoverSlide(darken($action, 10%));
 }
 

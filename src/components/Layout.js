@@ -5,9 +5,9 @@ import Footer from "./Footer"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faBolt, faCode, faEnvelope, faHome, faBug } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faCode, faEnvelope, faHome, faBug, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
-library.add( fab, faBolt, faCode, faEnvelope, faHome, faBug )
+library.add( fab, faBolt, faCode, faEnvelope, faHome, faBug, faMapMarkerAlt )
 
 const Layout = ({ children }) => {
     return (

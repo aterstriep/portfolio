@@ -2,10 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Projects from '../components/projects/ProjectsGrid'
-import Image from '../components/Image'
-import SocialLinks from '../components/SocialLinks'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import About from '../components/About'
 
 const IndexPage = () => {
   return (
@@ -19,20 +16,15 @@ const IndexPage = () => {
       <div className="home-header">
 
         <div className="home-header-content">
-          <div className="headshot">
-            <Image src="at.jpg" alt="Ashley Terstriep headshot" />
-          </div>
-          <div className="header-intro">
-            <h2>Hey there, my name is <span className="text-emph">Ashley Terstriep.</span></h2>
-            <p>I'm a <span className="text-emph">frontend developer</span> with additional experience in backend development, website design, and marketing. I've worn a lot of creative hats that give me a unique experience as a developer.</p>
-            <p className="current-position"><FontAwesomeIcon icon="code" /> Currently a Website Designer/Developer at <a href="https://vervocity.io" target="_blank" rel="noopener">Vervocity</a></p>
-            <SocialLinks />
-          </div>
+            <p className="subtitle">Hey there,</p>
+            <h1><span>My name is <span className="text-emph">Ashley Terstriep</span>,</span> <span>& I'm a frontend website developer.</span></h1>
         </div>
 
       </div>
       
       <Projects />
+
+      <About />
 
     </Layout>
   )
