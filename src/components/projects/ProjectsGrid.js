@@ -19,6 +19,17 @@ const ProjectsGrid = () => {
                 />
 
                 <Project
+                    title="Notes App"
+                    description="A plain text notes app created with React that stores notes on an Express server."
+                    links={[
+                        { text: "View on GitHub", icon: ["fab", "github"], url: "https://github.com/aterstriep/notes-app"},
+                        { text: "View Deployed", icon: "bolt", url: "https://at-notes-app.herokuapp.com/" }
+                    ]}
+                    imageFileName="notes-screenshot.png"
+                    categoryList={["React", "CSS/SCSS", "Javascript", "Express", "Node.js", "Heroku"]}
+                />
+
+                <Project
                     title="Portfolio"
                     description="A basic single page portfolio site to display recent projects. This is currently being used as a placeholder while I redesign my portfolio."
                     links={[

@@ -30,6 +30,15 @@ const Category = ({name}) => {
         case "netlify":
             borderColor = "#5cebdf";
             break;
+        case "heroku":
+            borderColor = "#8863b3";
+            break;
+        case "node.js":
+            borderColor = "#84ba64";
+            break;
+        default:
+            borderColor = "black";
+            break;
     }
 
     return (
