@@ -17,7 +17,7 @@ const IndexPage = () => {
 
         <div className="home-header-content">
             <p className="subtitle">Hey there,</p>
-            <h1><span>My name is <span className="text-emph">Ashley Terstriep</span>,</span> <span>& I'm a frontend website developer.</span></h1>
+            <h1><span>My name is <span className="text-emph">Ashley Terstriep</span>,</span> <span>& I'm a frontend software engineer.</span></h1>
         </div>
 
       </div>
